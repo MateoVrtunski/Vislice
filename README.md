@@ -4,4 +4,4 @@
 Vislice so kul igra.
 
 ## Avtorji
-- velemojster
+- Babuuuu Frik
