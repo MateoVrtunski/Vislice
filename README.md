@@ -1,2 +1,4 @@
 # Vislice
-Vislice na vajah
+
+
+Vislice so kul igra.
