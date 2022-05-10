@@ -1,7 +1,7 @@
-import vislice
+import model
 
 def izpis_igre(igra):
-    preostali_poskusi = vislice.STEVILO_DOVOLJENIH_NAPAK - igra.stevilo_napak()
+    preostali_poskusi = model.STEVILO_DOVOLJENIH_NAPAK - igra.stevilo_napak()
     return ("====================================================================================== \n" +
     "Število preostalih poskusov: {}\n".format(preostali_poskusi) +
     "Pravilni del gesla: {}\n".format(igra.pravilni_del_gesla()) +
@@ -18,16 +18,16 @@ def zahtevaj_vnos():
     return input("Črka: ")
 
 def pozeni_vmesnik():
-    igra = vislice.nova_igra()
+    igra = model.nova_igra()
     while True:
         print(izpis_igre(igra))
         crka = zahtevaj_vnos()
         stanje = igra.ugibaj(crka)
-        if stanje == vislice.ZMAGA:
+        if stanje == model.ZMAGA:
             print(izpis_zmage(igra))
             break
 
-        elif stanje == vislice.PORAZ: 
+        elif stanje == model.PORAZ: 
             print(izpis_poraza(igra))
             break     
 
