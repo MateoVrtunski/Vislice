@@ -16,18 +16,18 @@
 
   % if stanje == model.ZMAGA:
   <h1> OMG! Uganil si mojo besedo, a sm loh tvoj frend? </h1>
-  <form action="/igra/" method="post">
+  <form action="/nova_igra/" method="post">
     <button type="submit">Nova igra</button>
   </form>
 
   % elif stanje == model.PORAZ:
   <h1> Jao, majmun nesposoben... Moja beseda je bila <b>{{igra.geslo}}</b> </h1>
-  <form action="/igra/" method="post">
+  <form action="/nova_igra/" method="post">
     <button type="submit">Nova igra</button>
   </form>
 
   % else:
-  <form action="/igra/{{id_igre}}/" method="post">
+  <form action="/igra/" method="post">
    Črka: <input type="text" name="crka"> 
     <button type="submit">Nova igra</button>
   </form>
